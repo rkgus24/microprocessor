@@ -1,0 +1,46 @@
+sudo apt update
+sudo apt upgrade
+ifconfig 
+sudo apt install net-tools ifconfig를 사용하기 위해
+sudo apt install gcc gdb C컴파일러 디버거 설치
+vscode .zip을 이용해 전용 vscode를 만들 수 있음 portable mode
+portable mode 리눅스 환경변수는 개발자가 등록해야함
+vscode에 wsl를 깔고 ubuntu에 code .를 치셈
+terminal에서 pwd로 현재 위치 mkdir mic_0309로 폴더 만듦
+cd mic_0309로 들어감
+touch 0309_01.c로 파일을 만들었음
+gcc -o 0309 0309_01.c로 컴파일을 함
+./0309으로 출력 결과를 볼 수 있음
+./ 현재 위치 디렉토리 안에 있는 실행 파일
+
+# 
+
+- 전처리기: 소스파일(*.c)에 gcc를 동작시키려면 가장 먼저 전처리기 cpp가 동작하고, cpp는 소스파일(**.c)의 #include와 #define과 같은 전처리기 부분을 처리(즉, 필요한 헤더 파일을 삽입하고 실행 문장의 매크로를 상수로 변환)
+
+- 컴파일러: 전처리된 파일(*.i)로부터 어셈블리어로 된 파일(*.s)을 생성
+- 어셈블러: 어셈블리어로 된 파일(*.s)을 기계가 직접 이해할 수 있는 기계어로 된 오브젝트 파일(**.o)로 변환
+- 링커: 오브젝트 파일(*.o)은  printf, scanf와 같은 라이브러리 함수가 없기에 실행될 수 없고, 여러 파일로 이루어진 프로그램의 경우 파일 간 연결이 이루어지지 않아 실행되지 않는데, 이 때 링커를 활용해 라이브러리 함수와 오브젝트 파일들을 연결해 실행 파일을 생성
+
+# 
+
+gcc : 컴파일러 명령어
+0309 : 실행파일
+0309.c : 소스파일
+ex) gcc 0309.c라고만 적어도 a.out 파일을 생성함 a.out을 실행하기 위해선 $./a.out을 해야함
+
+컴파일 할 때 출력 파일 이름 지정 방법
+gcc -o 출력파일이름 소스파일이름
+gcc -o 0309 0309_01.c
+
+여러 파일을 동시에 컴파일 하는 방법
+gcc -o 출력파일이름 소스파일이름1, 소스파일이름2
+gcc -o 0309 0309_01.c, 0309_02.c
+
+portable mode에서 환경변수를 만들어야 할 때
+export PATH=$PATH:/mnt/c/VScode/bin
+:wq
+
+배열과 포인터 관계
+
+
+
