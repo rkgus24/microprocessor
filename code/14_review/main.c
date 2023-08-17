@@ -43,7 +43,7 @@
 UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
-unit8_t RxBuffer[1];
+uint8_t RxBuffer[1];
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
